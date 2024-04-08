@@ -79,31 +79,41 @@
 //   );
 // };
 
-
 // A Fresh Design
 // A Fresh Design
 
 import { Routes, Route } from "react-router-dom";
+import { HuddleProvider, HuddleClient } from "@huddle01/react";
 
 import "./App.css";
 import Contact from "./components/Contact/Contact";
 import Call from "./components/Call/Call";
 
+const huddleClient = new HuddleClient({
+  projectId: import.meta.env.CALL_PROJECT_ID,
+  options: {
+    activeSpeakers: {
+      size: 8,
+    },
+  },
+});
+
 function App() {
   return (
     <div className="w-full">
       {/* <Navbar /> */}
-      <Routes>
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/call" element={<Call />} />
-      </Routes>
+      <HuddleProvider client={huddleClient}>
+        <Routes>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/call" element={<Call />} />
+        </Routes>
+      </HuddleProvider>
       {/* <Footer /> */}
     </div>
   );
 }
 
 export default App;
-
 
 // A Fresh Design
 // A Fresh Design

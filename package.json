@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@huddle01/react": "^2.0.8",
+    "@huddle01/server-sdk": "^2.2.2",
     "@metaplex/js": "^0.0.1",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
