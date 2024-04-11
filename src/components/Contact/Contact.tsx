@@ -3,8 +3,8 @@ import Contacts from "./Tabs/Contacts";
 
 const Contact = () => {
   const list = [
-    { name: "Ajibola", id: "1432432432432432" },
-    { name: "Samuel", id: "e2422dsdsad3e32" },
+    { name: "Adekunle", id: "1432432432432432" },
+    { name: "Fash", id: "e2422dsdsad3e32" },
   ];
   const [activeTab, setActiveTab] = useState("Contacts");
 
